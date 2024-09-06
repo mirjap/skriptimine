@@ -1,0 +1,7 @@
+#!/bin/bash
+
+#echo, et tavalised lauseosad saada ning whoami, et saada kasutajanimi
+
+kasutaja=`whoami`
+
+echo "Tere,$kasutaja !"

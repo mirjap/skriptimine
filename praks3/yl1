@@ -1,0 +1,9 @@
+#!/bin/bash
+
+#skript mis küsib nime ja siis väljastab selle
+
+echo -n "Sisesta oma ees- ja perenimi: "
+
+read eesnimi perenimi
+
+echo "sinu eesnimi on $eesnimi ja perenimi on $perenimi"

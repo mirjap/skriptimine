@@ -1,0 +1,19 @@
+#!/bin/bash
+
+#skript, mis küsib ainepunktide arvu ja nädalate arvu, arvutab ja väljastab ühe nädala ajakulu(ümardatud)
+
+#küsime aine ja nädalate arvud
+echo -n "Sisestage ainepunktide arv:" 
+read aine
+
+
+echo -n "Sisestage nädalate arv:"
+read nadal
+
+aeg=`echo "scale=1;78/10" | bc`
+
+echo $aeg
+
+aeg_ymar="`echo "($aeg+0.9)/1" | bc`"
+
+echo $aeg_ymar

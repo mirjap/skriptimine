@@ -2,8 +2,11 @@
 
 #skript mis küsib nime ja siis väljastab selle
 
+#küsib nime
 echo -n "Sisesta oma ees- ja perenimi: "
 
+#võtab sisestatud nime eraldi elementidena
 read eesnimi perenimi
 
+#väljastab koos lausega ees ja perenime
 echo "sinu eesnimi on $eesnimi ja perenimi on $perenimi"

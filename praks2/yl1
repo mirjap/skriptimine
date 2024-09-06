@@ -1,6 +1,8 @@
 #!/bin/bash
 
 #echo, et tavalised lauseosad saada ning whoami, et saada kasutajanimi
+#asendasin whoami nii, et oleks endal lihtsam
+
 
 kasutaja=`whoami`
 

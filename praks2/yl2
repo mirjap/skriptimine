@@ -1,0 +1,19 @@
+#!/bin/bash
+
+#väljastame kellaaja ja kuupäeva kalendrina
+
+
+#täpne kuupäev
+date +"Täna on %A, %B %d, %Y"
+
+#kellaaeg
+date +"Kell on %H:%M"
+
+#vaherida
+echo
+
+#tekst kalendri kohal
+date +"%B %Y kalender"
+
+#kalender
+cal | tail -n 7

@@ -1,0 +1,20 @@
+#!/bin/bash
+
+#Teeme skripti, mis arvutab sisestatud numbrite põhjal, mitu bussi täidetakse täielikult ning mitu inimest jääb maha
+
+echo
+# Küsime numbrid
+echo -n "Mitu reisijat on grupis:"
+read reisijad
+
+echo -n "Mitu kohta on bussis:"
+read bussid
+
+
+full=$(echo "scale=0; $reisijad / $bussid" | bc)
+
+# arvutab mitu reisijat jäävad ilma istekohata 
+maas=$(echo "scale=0; $reisijad - ($full * $bussid)" | bc)
+
+echo "Täis busse on $full"
+echo "$maas Reisijat jäid ilma istekohata"

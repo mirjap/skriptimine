@@ -4,6 +4,6 @@
 #asendasin whoami nii, et oleks endal lihtsam
 
 
-kasutaja=`whoami`
+kasutaja=$USER
 
-echo "Tere,$kasutaja !"
+echo "Tere,${kasutaja} !"

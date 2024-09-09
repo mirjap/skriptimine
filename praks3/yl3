@@ -6,10 +6,10 @@
 echo -n "Sisestage ainepunktide arv:" 
 read aine
 
-
 echo -n "Sisestage nädalate arv:"
 read nadal
 
+#arvutame väärtused õpetuse järgi
 aeg=`echo "scale=1;78/10" | bc`
 
 echo $aeg

@@ -1,0 +1,16 @@
+#!/bin/bash
+
+#teeme skripti, mis väljastab, kas arv on paaris või mitte
+
+echo "Sisestage arv:"
+
+read arv
+
+val="2"
+
+if (($arv % 2)); then
+ echo "arv pole paaris"
+
+else echo "Arv on paaris"
+
+fi

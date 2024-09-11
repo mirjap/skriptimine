@@ -1,0 +1,26 @@
+#!/bin/bash
+
+#kuu numbri järgi väljastame aastaaja
+
+echo -n "Sisestage kuu number:"
+read kuu
+
+if (( 1<= $kuu && $kuu <=2)); then
+echo "Praegu on talv"
+
+elif (( $kuu == 12)); then
+echo "Praegu on talv"
+
+elif (( 3<= $kuu && $kuu<=5)); then
+echo "Praegu on kevad"
+
+elif ((6<= $kuu && $kuu <=8)); then
+echo "Praegu on suvi"
+
+elif ((9<= $kuu && $kuu <=11)); then
+echo "Praegu on sügis"
+
+else
+echo "Sellise numbriga kuud pole"
+
+fi

@@ -1,0 +1,25 @@
+#!/bin/bash
+
+#Skript küsib vanust ning selle põhjal defineerib vanusegrupi
+
+echo -n "Palun sisestage oma vanus:"
+read vanus
+
+if ((0< $vanus && $vanus <= 11)); then
+echo "Oled laps"
+
+elif ((12< $vanus && $vanus <=18)); then 
+echo "Oled nooruk"
+
+elif ((19< $vanus && $vanus <=63)); then
+echo "Oled täiskasvanu"
+
+elif ((64< $vanus && $vanus <=113)); then
+echo "Oled seenior"
+
+elif (($vanus >113)); then
+echo "Viga! Vanim inimene maailmas elas 112 aastaseks"
+
+else
+echo "Viga! Ebasobilik sisend"
+fi

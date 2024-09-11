@@ -1,0 +1,25 @@
+#!/bin/bash
+
+#skript peab vastavalt kellaajale tervitama õigelt
+
+echo -n "Sisestage kellaaeg:"
+read kell
+
+if ((6<= $kell && $kell<= 11)); then
+echo "Tere hommikust!"
+
+elif ((12<= $kell && $kell<=18)); then
+echo "Tere päevast!"
+
+elif ((19<= $kell && $kell <=22)); then
+echo "Tere õhtust!"
+
+elif ((23<= $kell && $kell<=24)); then 
+echo "Head ööd!"
+
+elif ((0<= $kell && $kell<=5)); then
+echo "Head ööd!"
+
+else
+echo "Viga! Ebasobilik sisend"
+fi

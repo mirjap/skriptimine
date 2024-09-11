@@ -2,23 +2,26 @@
 
 #skript peab vastavalt kellaajale tervitama õigelt
 
+
 echo -n "Sisestage kellaaeg:"
 read kell
 
+user=$USER
+
 if ((6<= $kell && $kell<= 11)); then
-echo "Tere hommikust!"
+echo "Tere hommikust, ${user}!"
 
 elif ((12<= $kell && $kell<=18)); then
-echo "Tere päevast!"
+echo "Tere päevast, ${user}!"
 
 elif ((19<= $kell && $kell <=22)); then
-echo "Tere õhtust!"
+echo "Tere õhtust, ${user}!"
 
 elif ((23<= $kell && $kell<=24)); then 
-echo "Head ööd!"
+echo "Head ööd, ${user}!"
 
 elif ((0<= $kell && $kell<=5)); then
-echo "Head ööd!"
+echo "Head ööd, ${user}!"
 
 else
 echo "Viga! Ebasobilik sisend"

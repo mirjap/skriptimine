@@ -1,0 +1,30 @@
+#!/bin/bash
+
+#skript annab meile teada, kas arv on paaris või ei, arv sisestatakse skripti käivitamisel
+
+
+if [ $# -ne 1 ]; then 
+echo "Kasutamine: $0 <arv>"
+exit 1
+
+fi
+
+arv=$1
+
+
+
+
+#echo "Sisestage arv:"
+
+#read arv
+
+
+if (($arv % 2)); then
+echo "arv pole paaris"
+
+else 
+echo "Arv on paaris"
+
+fi
+
+

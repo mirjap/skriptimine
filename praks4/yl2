@@ -1,0 +1,17 @@
+#!/bin/bash
+
+#bussiülesanne uuesti, aga nüüd ei jäta reisijaid maha
+
+#andmed
+echo -n "Mitu kohta on bussis:"
+read bussid
+
+echo -n "Mitu on reisijaid:"
+read reisijad
+
+#arvutame
+tais=$((($reisijad + $bussid -1)/$bussid))
+
+#väljastame
+echo "kokku on vaja $tais bussi"
+

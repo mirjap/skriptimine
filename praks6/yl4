@@ -1,0 +1,35 @@
+#!/bin/bash
+
+#skript, mis tuvastab, kas sisestatud arv on algarv
+
+echo -n "Sisestage arv:"
+read number
+
+wa=2
+
+wo=0
+
+#jagame kahega kuni number/2
+
+while test $wa -le `expr $number / 2`
+do
+
+#kas number jagub 
+if test `expr $number % $wa` -eq 0
+then
+wo=1
+
+fi
+
+#suurenda muutujat
+wa=`expr $wa + 1`
+done
+
+if test $wo -eq 1
+then
+echo "Pole algarv"
+
+else
+echo "Algarv"
+
+fi

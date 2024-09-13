@@ -1,0 +1,16 @@
+#!/bin/bash
+
+#skript, mis arvutab kümne esimese paarisarvude summa
+
+
+sum=0
+paar=10
+
+for ((wa=1; wa<=paar; wa++))
+do
+if ((wa %2==0)); then
+sum=$((sum +wa))
+fi
+done
+echo "arvude vahemikus 1-10 paarisarvude summa on $sum"
+

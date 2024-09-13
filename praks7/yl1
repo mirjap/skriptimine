@@ -1,0 +1,27 @@
+#!/bin/bash
+
+#skript väljastab tahetud arvu tärne
+
+echo -n "Sisestage ridade arv: "
+read read
+
+echo -n "Sisestage tärnide arv reas: "
+read mitu
+
+
+for ((wa=1; $wa<=$read; wa++))
+do
+for ((wo=1; $wo<=$mitu; wo++))
+do
+if [ $wo -eq 1 ]; then	
+echo -n "$wa. * "
+
+else
+echo -n "* "
+
+fi
+
+done
+echo ""
+
+done

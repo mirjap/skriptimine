@@ -1,0 +1,12 @@
+#!/bin/bash
+
+#Skript, mis väljastab sisestatud numbrile vastava kuu
+
+echo "Sisesta kuu number: "
+read kuu
+
+kuud=( Jaanuar Veebruar Märts Aprill Mai Juuni Juuli August September Oktoober November Detsember)
+
+
+
+echo "Praegu on ${kuud[$kuu -1]}"

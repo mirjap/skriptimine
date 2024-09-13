@@ -1,0 +1,20 @@
+#!/bin/bash
+
+#skript, mis arvutab suvelise sisestatud täisarvu elementide summa
+
+echo -n "Sisetage täisarv: "
+read nmbr
+
+end=0
+
+while [ $nmbr -ne 0 ]
+do
+jag=$(($nmbr % 10))
+end=$(($end + $jag))
+nmbr=$(($nmbr / 10))
+done 
+echo "Sisestatud täisarvu elementide summa on $end"
+  
+
+
+

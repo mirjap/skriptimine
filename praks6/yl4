@@ -5,6 +5,7 @@
 echo -n "Sisestage arv:"
 read number
 
+
 wa=2
 
 wo=0
@@ -25,9 +26,12 @@ fi
 wa=`expr $wa + 1`
 done
 
-if test $wo -eq 1
-then
+if  (($number>=21)); then
+echo "Lubame vaid 20 esimese täisarvu kohta päringut teha"
+
+elif test $wo -eq 1; then
 echo "Pole algarv"
+
 
 else
 echo "Algarv"

@@ -1,27 +1,13 @@
 #!/bin/bash
 
-#skript väljastab tahetud arvu tärne
+#skript väljastab 5 rida tärne
 
-echo -n "Sisestage ridade arv: "
-read read
-
-echo -n "Sisestage tärnide arv reas: "
-read mitu
-
-
-for ((wa=1; $wa<=$read; wa++))
+for ((wa=1; wa<=5; wa++ ))
 do
-for ((wo=1; $wo<=$mitu; wo++))
+echo -n "$wa."
+for (( wo=1; wo<=5; wo++)) 
 do
-if [ $wo -eq 1 ]; then	
-echo -n "$wa. * "
-
-else
-echo -n "* "
-
-fi
-
+echo -n "*"
 done
-echo ""
-
+echo "" 
 done

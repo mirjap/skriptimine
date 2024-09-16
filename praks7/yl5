@@ -1,0 +1,22 @@
+#!/bin/bash
+
+#skript väljastab 5 rida tärne vastavalt rea numbrile
+
+echo -n "Sisestage ridade arv: "
+read rida
+
+
+for ((wa= 2; wa<= $rida; wa++ ))
+do
+echo -n "$wa."
+for (( wo = $wa; wo<=$rida; wo++))
+do
+echo -n "o"
+done
+
+for ((wi=$rida-$wa+2; wi<=$rida; wi++))
+do
+echo -n "*" 
+done
+echo ""
+done

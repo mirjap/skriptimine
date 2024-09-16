@@ -1,0 +1,13 @@
+#!/bin/bash
+
+#skript väljastab 5 rida tärne
+
+for ((wa=1; wa<=5; wa++ ))
+do
+echo -n "$wa."
+for (( wo=1; wo<=$wa; wo++))
+do
+echo -n "*"
+done
+echo "" 
+done

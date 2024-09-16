@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#skript väljastab 5 rida tärne
+#skript väljastab 5 rida tärne vastavalt rea numbrile
 
 for ((wa=1; wa<=5; wa++ ))
 do

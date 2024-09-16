@@ -2,7 +2,10 @@
 
 #skript väljastab 5 rida tärne vastavalt rea numbrile
 
-for ((wa=1; wa<=5; wa++ ))
+echo -n "Sisestage ridade arv: "
+read rida
+
+for ((wa=1; wa<= $rida ; wa++ ))
 do
 echo -n "$wa."
 for (( wo=1; wo<=$wa; wo++))

@@ -1,8 +1,9 @@
+
 #!/bin/bash
 
 #Teeme skripti, mis arvutab sisestatud numbrite põhjal, mitu bussi täidetakse täielikult ning mitu inimest jääb maha
 
-echo
+
 # Küsime numbrid
 echo -n "Mitu reisijat on grupis:"
 read reisijad
@@ -13,8 +14,16 @@ read bussid
 
 full=$(echo "scale=0; $reisijad / $bussid" | bc)
 
+
 # arvutab mitu reisijat jäävad ilma istekohata 
 maas=$(echo "scale=0; $reisijad - ($full * $bussid)" | bc)
 
+
+if (( $reisijad <= $bussid )); then
+yle=$(echo "scale=0; $bussid - $reisijad" | bc)
+echo "keegi ei jää maha, üle jääb $yle istekohta"
+else
+
 echo "Täis busse on $full"
 echo "$maas Reisijat jäid ilma istekohata"
+fi

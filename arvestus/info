@@ -1,0 +1,16 @@
+#!/bin/bash
+
+#Mirja Pärnpuu
+#info
+
+#skript tervitab sisselogitud kasutajat ning väljastab kuupäeva ja kella
+
+kasutaja=$USER
+
+echo "Tere ${kasutaja}!"
+
+date +"Täna on %d.%m.%Y kell %H:%M"
+
+
+
+#echo "Täna on 11.11.2020. kell 8:45"

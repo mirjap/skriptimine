@@ -1,0 +1,19 @@
+#!/bin/bash
+
+#Mirja Pärnpuu
+#kujund
+
+#väljastab sisendi põhjal kolmnurga
+
+echo -n "Sisestage ridade arv: "
+read rida
+
+for (( wa=1; wa<=$rida; wa++ ))
+do
+echo -n ""
+for (( wo=$wa; wo<=$rida; wo++ ))
+do 
+echo -n "*"
+done
+echo ""
+done

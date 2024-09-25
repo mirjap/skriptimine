@@ -1,0 +1,38 @@
+#!/bin/bash
+
+#skript väljastab sisendi põhjal kolmnurgad
+
+
+echo -n "Sisestage number:"
+read number
+
+for ((wa=0; wa < $number; wa++)); do
+	#esimene osa
+	for ((wo=wa; wo < $number; wo++)); do
+	echo -n "*"
+	done
+	#esimene rida tühjaga
+	if (($wa == 1)); then
+	echo -n " "
+	else
+	#keskmine kolmnurk
+	for ((wi=0; wi < 2*wa-1; wi++)); do
+	echo -n " "
+	done
+	fi
+	#esimesel real oli lampi 1 * rohkem, eemaldame
+	if (($wa==0)); then
+	for ((wu=wa+1; wu < $number; wu++)); do
+        echo -n "*"
+        done
+	#teine osa kolmnurgast
+	else
+	for ((wu=wa; wu < $number; wu++)); do
+        echo -n "*"
+        done
+	fi 
+
+	echo
+done
+
+

@@ -1,0 +1,29 @@
+#!/bin/bash
+
+#Mirja Pärnpuu
+#menu
+
+#Skript väljastab menüü ja laseb kasutajal valida ühe
+
+echo "1) liha ja kartulid"
+echo "2) kala ja krõpsud"
+echo "3) supp ja salat"
+
+echo -n "Tee oma valik (1, 2 või 3): "
+read mis
+
+if (($mis == 1)); then
+echo "Väga maitsev, aga jälgi oma tervist!"
+echo "Head isu!"
+
+elif (($mis == 2)); then
+echo "Brititoit on maisev!"
+echo "Head isu!"
+
+elif (($mis == 3)); then
+echo "Nii tervislik ja igav..."
+echo "Head isu!"
+
+else
+echo "Ebasobilik sisend"
+fi

@@ -1,0 +1,27 @@
+#!/bin/bash
+
+#skript eraldab failidesse kindlad osad algfailist
+
+
+cat inimesed.txt | cut -f2 -d" " | cut -f1 -d";" > /home/user/skriptimine/konveier/eesnimed.txt
+
+# perenimed
+cat inimesed.txt | cut -f2 -d":" | cut -f1 -d"," > /home/user/skriptimine/konveier/perenimed.txt
+
+# 8. domeenid
+cat inimesed.txt | cut -f2 -d"-" > /home/user/skriptimine/konveier/domeenid.txt
+
+# 9. väike eesnimi
+tr '[:upper:]' '[:lower:]' < /home/user/skriptimine/konveier/eesnimed.txt > /home/user/skriptimine/konveier/eesnimed_lower.txt
+
+# 10. väike perenimi
+tr '[:upper:]' '[:lower:]' < /home/user/skriptimine/konveier/perenimed.txt > /home/user/skriptimine/konveier/perenimed_lower.txt
+
+# 11. kasutajad
+paste -d"." /home/user/skriptimine/konveier/eesnimed_lower.txt /home/user/skriptimine/konveier/perenimed_lower.txt > /home/user/skriptimine/konveier/kasutajad.txt
+
+# 12. mailid
+paste -d"@" /home/user/skriptimine/konveier/kasutajad.txt /home/user/skriptimine/konveier/domeenid.txt > /home/user/skriptimine/konveier/mailid.txt
+
+
+echo "tehtud"
